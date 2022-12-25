@@ -1,0 +1,73 @@
+.plus{
+    min-width: 1em;
+    min-height: 1em;
+    width: 1em;
+    height: 1em;
+}
+.plus:hover{
+    color:red;
+}
+.item-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+ul li{
+    text-decoration: none;
+    color: #444;
+}
+ul{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: 0;
+    width: 400px;
+    height: 100%;
+}
+.link{
+    text-decoration: none;
+    color: #222;
+    outline: none;
+}
+.title{
+    font-size: 36px;
+    Color: #222;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.app{
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+}
+.addBtn{
+    margin-left: 12px;
+}
+.form-field{
+    width: 400px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.name{
+    border: 1px solid #222;
+    font-size: 18px;
+}
+form{
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+}
+.exit{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color:blue;
+}
+body{
+    margin: 0;
+}
+input[type='checkbox']{
+    width: 30px;
+    height: 30px;
+}
