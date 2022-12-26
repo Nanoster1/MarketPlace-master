@@ -3,6 +3,7 @@ package com.example.marketplace;
 import com.example.marketplace.controlers.RESTApiController;
 import com.example.marketplace.models.Item;
 import com.example.marketplace.models.ItemResponse;
+import com.example.marketplace.repository.ItemRepository;
 import com.example.marketplace.service.ItemService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.assertj.core.api.Assertions;
@@ -10,13 +11,16 @@ import org.assertj.core.util.Lists;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -60,7 +64,7 @@ class MarketPlaceApplicationTests {
     }
 
     @Test
-    public void testGet() throws Exception {
+    public void getItem() throws Exception {
         final var testName = "testName";
         var resp = new ItemResponse();
         resp.setName(testName);
